@@ -349,6 +349,15 @@ g#graph-texts {
   text-align: justify;
 }
 
+/* Project details table */
+.table{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* skills bar chart */
+.rect:hover { opacity: 0.5; }
+
 #Profile {background-color: #eaf8da;}
 #Projects {background-color:#d7e3fc;}
 #Analysis {background-color: #f7f7f7;}

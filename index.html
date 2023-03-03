@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>H. Sedmak</title>
+    <title>Cybersonic</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
 <style>
@@ -19,8 +19,8 @@
 </head>
 <body class="textClass">
 
-<button class="tablink" onclick="openPage('Profile', this, '#eaf8da')" >At a glance</button>
-<button class="tablink" onclick="openPage('Projects', this, '#d7e3fc')" id="defaultOpen">Projects details</button>
+<button class="tablink" onclick="openPage('Profile', this, '#eaf8da')" id="defaultOpen">At a glance</button>
+<button class="tablink" onclick="openPage('Projects', this, '#d7e3fc')" >Projects details</button>
 <button class="tablink" onclick="openPage('Analysis', this, '#f7f7f7')">IT Skills</button>
 <button class="tablink" onclick="openPage('Charts', this, '#fffae5')">Charts</button>
 <button class="tablink" onclick="openPage('Instructions', this, '#C3FF99')">Graphql instructions</button>
@@ -28,36 +28,36 @@
 
 <div id="Profile" class="tabcontent">
   <section>
-    <div class="container">
+    <div class="container table">
       <!-- implementing a 2x2 'table' or 'grid' -->
       <div class="row">
         <div class="column" id="hProfile">
           <img src="/home/helena/graphql/images/Helena.png" title="H. Sedmak" alt="Helena_Sedmak_picture" style="float:left"; id="profile">
-          <h4 ><i>Profile:</i></h4>
+          <h4 ><i>Helena Sedmak Profile</i></h4>
           <div id="addData"></div>
           <p>Joined the 01F fellowship in January 2022</p>
         </div>
         <div class="column" id="hProfile">
-          <h4 ><i>Projects completed:</i></h4>
+          <h4 ><i>Projects completed</i></h4>
           <div id="projectsList" class="content"></div>
         </div>
       </div>
       <div class="row">
         <div class="column" id="charts">
-          <h4 style="margin-bottom: 10px;"><i>XPs by project ('000s):</i></h4>
+          <h4 style="margin-bottom: 10px;"><i>XPs by project ('000s)</i></h4>
           
           <!-- line graph: XP history -->
           <!--x & y axes and labels -->
-        <section id="svg-path">
+        <section id="svg-path" class="table">
           <section id="card"></section>
         </section>
       
         </div>
         <div class="column" id="charts">
-          <h4 style.textAlign="center"><i>IT skill as % of all skills:</i></h4>
+          <h4 style.textAlign="center"><i>IT skill as % of all skills</i></h4>
 
            <!-- container for pie chart showing technology percentage -->
-          <div id="pieChart">
+          <div id="pieChart" class="table">
             
             <!-- drop-down skills selection box -->
 
@@ -89,18 +89,19 @@
 </div>
 
 
-<div id="Projects" class="tabcontent">
+<div id="Projects" class="tabcontent" style="text-align: center;">
   <h3>The awesome projects I completed at 01F!</h3>
 
     <body >
       <section>
-        <div class="container">
-            <table>
+        
+        <div class="container table">
+            <table style="text-align: left" class="table">
                 <tr>
-                    <th>Project&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th>Project description&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
                     <th>Key skill&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
                     <th>Audit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                    <th>Repo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th>My repo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
                     <th>Completed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
                     <th>Team&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
                     <th>Required/Optional&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
@@ -333,15 +334,15 @@
             </table>  
             <br>
             <br>
-            <table>
+            <table class="table">
               <tr>
                   <th>Golang revision&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>  
               </tr>
               <tr>
-                <td><a href="https://learn.01founders.co/git/AthenaHTA2/GO_Revision/src/branch/main/Exam_Pilot_GO.pdf" style="display:block;">Exam Pilot-Go</a></td>
+                <td style="text-align: left"><a href="https://learn.01founders.co/git/AthenaHTA2/GO_Revision/src/branch/main/Exam_Pilot_GO.pdf" style="display:block;">Exam Pilot-Go</a></td>
               </tr>
               <tr>
-                <td><a href="https://learn.01founders.co/git/AthenaHTA2/AaaGoRevision/src/branch/master/Exam_Pilot_GO/Golang-Cheat-Sheet-by-Golang-Dojo.pdf" style="display:block;">Golang Dojo cheat sheet</a></td>
+                <td style="text-align: left"><a href="https://learn.01founders.co/git/AthenaHTA2/AaaGoRevision/src/branch/master/Exam_Pilot_GO/Golang-Cheat-Sheet-by-Golang-Dojo.pdf" style="display:block;">Golang Dojo cheat sheet</a></td>
               </tr>
             </table>
         </div>
@@ -351,12 +352,14 @@
 </div>
 
 <div id="Analysis" class="tabcontent">
-  <h3>Analysis of Helena's Projects</h3>
-  <p>Summary of Skills and Technology</p>
-</div>
+<!-- the skills bar chart -->
+  <div style="text-align: center;">
+    <h3>IT Skills Summary Chart</h3>
+    <div id="d3-container"></div>
+  </div>
 
 <div id="Charts" class="tabcontent">
-  <h3>Charts</h3>
+  <h3 >Charts</h3>
   <p>A picture is worth a thousand words</p>
 </div>
 
