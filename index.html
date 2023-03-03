@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H. Sedmak</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Sirin+Stencil&display=swap');
+  
+  @media only screen and (max-width: 600px) {
+    body {
+      background-color:gainsboro;
+    }
+  }
+  </style>
+</head>
+<body class="textClass">
+
+<button class="tablink" onclick="openPage('Profile', this, '#eaf8da')" id="defaultOpen">At a glance</button>
+<button class="tablink" onclick="openPage('Projects', this, '#d7e3fc')" >Projects details</button>
+<button class="tablink" onclick="openPage('Analysis', this, '#f7f7f7')">IT Skills</button>
+<button class="tablink" onclick="openPage('Charts', this, '#fffae5')">Charts</button>
+<button class="tablink" onclick="openPage('Instructions', this, '#C3FF99')">Graphql instructions</button>
+
+
+<div id="Profile" class="tabcontent">
+  <section>
+    <div class="container">
+      <!-- implementing a 2x2 'table' or 'grid' -->
+      <div class="row">
+        <div class="column" id="hProfile">
+          <img src="/home/helena/graphql/images/Helena.png" title="H. Sedmak" alt="Helena_Sedmak_picture" style="float:left"; id="profile">
+          <h4 ><i>Profile:</i></h4>
+          <div id="addData"></div>
+          <p>Joined the 01F fellowship in January 2022</p>
+        </div>
+        <div class="column" id="hProfile">
+          <h4 ><i>Projects completed:</i></h4>
+          <div id="projectsList" class="content"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column" id="charts">
+          <h4 style="margin-bottom: 10px;"><i>XPs by project ('000s):</i></h4>
+          
+          <!-- line graph: XP history -->
+          <!--x & y axes and labels -->
+        <section id="svg-path">
+          <section id="card"></section>
+        </section>
+      
+        </div>
+        <div class="column" id="charts">
+          <h4 style.textAlign="center"><i>IT skill as % of all skills:</i></h4>
+
+           <!-- container for pie chart showing technology percentage -->
+          <div id="pieChart">
+            
+            <!-- drop-down skills selection box -->
+
+        
+            <select id="Skills">
+                <!-- <option value="0">-- Select skill--</option> -->
+                <option value="1" selected >GO</option>
+                <option value="2" >Backend</option>
+                <option value="3" >Programming</option>
+                <option value="4" >JavaScript</option>
+                <option value="5" >Frontend</option>
+                <option value="6" >Docker</option>
+                <option value="7" >Syst. Admin</option>
+                <option value="8"  >Algorithms</option>
+                <option value="9" >HTML</option>
+                <option value="10" >Games</option>
+                <option value="11" >Statistics</option>
+                <option value="12"  >CSS</option>
+                <option value="13" >SQL</option>
+                <option value="14" >Rust</option>
+                <option value="15" >SVG</option>
+                <option value="16" >Graphql</option>
+              </select>
+
+            <!-- the pie graph -->
+          <!-- <svg id="cont" height="20" width="20" viewbox="0 0 20 20"> -->
+            <!-- background circle -->
+            <!-- <circle id="circle1" r="10" cx="10" cy="10" fill="white"/> -->
+
+            <!-- circle circumference = 2*pie*r (=2 * 3.14 * 10) -->
+            <!-- in this case, 31.4 is the circumference, and pie chart shows -->
+            <!-- second circle, used to create a 'wedge' by increasing its 'stroke-width'-->
+
+            <!-- <g>
+            <circle id="circle2" r="5" cx="10" cy="10" fill="transparent"
+              stroke="#F9DBBB"
+              stroke-width="10"
+             
+              stroke-dasharray="calc((90/820*100)*31.4/100)31.4"
+              transform="rotate(-90) translate(-20)"
+              />
+              
+            </g>
+            <text id="skillName" x="10" y="6.5" dy="3px" style="color: #3c096c" font-size="0.09em">HTML, 10%</text>
+          
+          </svg>-->
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+</div>
+
+
+<div id="Projects" class="tabcontent">
+  <h3>Helena's Projects</h3>
+  <p>The Awesome Projects I Completed at 01F!</p> 
+
+    <body >
+      <table><!-- ... --></table>
+    </body>
+
+</div>
+
+<div id="Analysis" class="tabcontent">
+  <h3>Analysis of Helena's Projects</h3>
+  <p>Summary of Skills and Technology</p>
+</div>
+
+<div id="Charts" class="tabcontent">
+  <h3>Charts</h3>
+  <p>A picture is worth a thousand words</p>
+</div>
+
+<div id="Instructions" class="tabcontent">
+  <h3>Project Instructions</h3><br>
+  The application must be hosted on 'github', netlify etc <br> 
+    https://pages.github.com/<br>
+    https://www.netlify.com/<br>
+    <br>
+    graphql links:<br>
+    https://graphql.org/<br>
+    https://%28%28domain%29%29/graphiql/<br>
+    https://learn.01founders.co/git/root/public/src/branch/master/subjects/graphql#:~:text=https%3A//((DOMAIN))/graphiql/<br>
+    <br>
+    Here are the list of tables that you are allowed to query<br>
+    User table<br>
+    Transactions table<br>
+    Progress table<br>
+    Results table<br>
+    Object table<br>
+    <br>
+    The profile must have three section from list below:<br>
+    Basic user identification<br>
+    XP amount<br>
+    level<br>
+    grades<br>
+    audits<br>
+    skills<br>
+    <br>
+    Query examples:<br>
+    
+      Query table 'user':<br>
+      {<br>
+        query {<br>
+            user {<br>
+                id<br>
+                login<br>
+            }<br>
+        }<br>
+      }<br>
+<br>
+      query for table 'user' that includes variables:<br>
+      {<br>
+        query {<br>
+          user(where: { id: { _eq: 6 }}) {<br>
+            id<br>
+            login<br>
+          }<br>
+        }<br>
+      }<br>
+    
+      <br>
+      To curl the API endpoint to see the result given by the server: <br>
+      curl "https://((DOMAIN))/api/graphql-engine/v1/graphql" --data '{"query":"{user{id login}}"}'<br>
+      with variables: curl "https://((DOMAIN))/api/graphql-engine/v1/graphql" --data '{"query":"{user(where:{id:{_eq:6}}){id login}}"}'
+      <br>
+      In graphQL the usage of arguments can be specified in the schema of the API. <br>
+      As mentioned above, you can visit the docs for the graphQL endpoint in: <br>
+      https://%28%28domain%29%29/graphiql
+      <br>
+      <br>
+      Example of nesting, using the result and user table :<br>
+      {<br>
+        result {<br>
+          id<br>
+          user {<br>
+            id<br>
+            login<br>
+          }<br>
+        }<br>
+      }<br>
+      <br>
+      we ask for the results id and users that are associated to the result,<br>
+      requesting the users logins and ids.
+      <br>
+      The types of queries to be used, together or separately, are normal, nested and using arguments<br>
+      <br>
+      With respect to graphs:<br>
+      graphs must be done using SVG. <br>
+      https://developer.mozilla.org/en-US/docs/Web/SVG<br>
+      https://www.tutorialspoint.com/svg/graph.htm<br>
+      You will have to do at least two different statistic graphs for the data given.<br>
+      Here are some possible combinations for the creation of the graphs:<br>
+  
+      XP earned in a time period (progress over time)<br>
+      Levels over time<br>
+      XP earned by project<br>
+      Audit ratio<br>
+      Projects PASS and FAIL ratio<br>
+      Piscine (JS/Go) stats<br>
+      PASS and FAIL ratio<br>
+      Attempts for each exercise<br>
+    </div>
+
+  <script src="/home/helena/graphql/modules/index.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,383 @@
+.textClass{
+    font-family: 'Sirin Stencil', cursive;
+    color: greenyellow;
+}
+
+/*to include each element's border and padding inside its width/height*/
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  /*font-family: 'Sirin Stencil', cursive;*/
+}
+
+/* Style tab links
+ to do: change width to 25% to hide 'Instructions' tab when finished*/
+.tablink {
+  background-color: #a6ffa1;
+  color: #3c096c;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-family: 'Sirin Stencil', cursive;
+  font-size: 18px;
+  width: 20%;
+
+}
+
+.tablink:hover {
+  background-color: #27fb6b;
+
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  color: #3c096c;
+  display: none;
+  padding: 60px 20px;
+  margin: 10px 10px 10px 10px;
+  height: 100%;
+}
+/*contains the four 'Profile' cards*/
+section
+{
+    /* height: 90vh; */
+    /* display:flex; */
+    /* margin:auto; */
+    align-items: center;
+    justify-content: center;
+}
+/*div inside 'section' that contains the four 'Profile' cards*/
+.container
+{
+    margin:auto;
+    margin-top: 3px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    margin-left: 3px;
+    max-width: 1000px;
+    width: 100%;
+    height: 850px;
+    max-height: 100%;
+    justify-content: center;
+}
+/*styles columns 1 and 2 in 'container*/
+.column
+{
+    background: #ccc;
+    margin:auto;
+    padding: 10px;
+    width: 50%;
+    text-align:center;
+    color: #fff;
+    vertical-align: middle;
+    border-left: 10px solid #fff;
+    border-right: 10px solid #fff;
+}
+/*styles row 1 and row 2 in 'container'*/
+.row
+{
+    /* margin:20px 0; */
+    transition: .5s;
+    display:flex;
+    margin:auto;
+    border-top: 10px solid #eaf8da;
+}
+
+/*styles each card*/
+.row:nth-child(1) .column:nth-child(1)
+{
+    background:#d7e3fc;
+
+}
+.row:nth-child(1) .column:nth-child(2)
+{
+    background:#fffae5;
+    height: 40vh;
+    overflow-y: auto;
+
+}
+
+/* <========> Start of line graph styling <=========> */
+
+
+/* the SVG container */
+section{
+  margin-bottom: 2px;
+}
+
+section#svg-path {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width:370px;
+  height: 165px;
+  /* overflow: scroll; */
+}
+
+/* line /pie graph */
+svg {
+  text-align: center;
+  height: 200px;
+  width: 250px;
+  overflow: scroll;
+  margin-left:auto;
+}
+
+/* pie graph container */
+#pieChart{
+  display:flex;
+  height: 200px;
+  width: 400px;
+}
+/* skills drop-down box */
+#Skills{
+  padding-left: 10px;
+  border:white;
+  height: 40px;
+  font-family: 'Sirin Stencil', cursive;
+  font-size: 16px;
+  color: #3c096c;
+}
+
+path {
+  fill: rgba(47, 165, 203, 0.1);
+  stroke-width: 2.5;
+  stroke:#3C84AB;
+  stroke-linejoin:round;
+  stroke-linecap:round;
+  height: 185px;
+  width: 385px;
+  opacity:0.7;
+  /* margin-top:20px;
+  margin-bottom: 20px; */
+}
+
+
+g#graph-points {
+  fill: rgba(33, 165, 175, 0);
+  stroke-width: 3;
+  stroke: none;
+  opacity:1.2;
+  z-index: 9;
+}
+
+g#graph-points:hover {
+  z-index: 9;
+  opacity: 2;
+  /* font-size: 30px;
+  text-align: center; */
+  transform-style: all;
+  transition-duration: 2s;
+}
+
+g#graph-lines {
+  fill: rgba(53, 55, 58, 0.5);
+  stroke: rgb(188, 198, 223);
+  stroke-dasharray:4;
+  opacity:2;
+}
+
+.labels {
+  text-anchor: middle;
+font-size: 10px;
+font-family: 'Sirin Stencil', cursive;
+}
+
+.label-title {
+font-weight: bold;
+text-transform: uppercase;
+font-size: 12px;
+fill: black;
+font-family: 'Sirin Stencil', cursive;
+}
+
+g#graph-texts {
+  fill: black;
+  stroke-width: 1;
+  stroke: none;
+  text-anchor:end;
+  font-size: 14px;
+  font-family: 'Sirin Stencil', cursive;
+}
+
+#card {
+  display:block;
+  top:-4px;
+  left:0px;
+  display: block;
+  position: relative;
+  width:fit-content;
+  height:fit-content;
+  /* padding: 3px; */
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #f7f7f7;
+  /* box-shadow: 1px 5px 5px gray; */
+  color:#3c096c;
+  font-family: 'Sirin Stencil', cursive;
+}
+
+#lineGraph {
+  height: 165px;
+  width: 365px;
+}
+
+
+/* deprecated: styles the line graph */
+/*section#svg-path {
+  text-align: center;
+  height: 180px;
+  width: 425px;
+
+}
+
+.lineGraph {
+  height: 170px;
+  width: 400px;
+}
+
+.lineGraph .grid {
+  stroke:darkgray;
+  stroke-dasharray: 0;
+  stroke-width: 1;
+}*/
+
+/* <========> End of line graph styling <=========> */
+
+.pieGraph .labels.x-labels {
+  text-anchor: middle;
+}
+
+.pieGraph .labels.y-labels {
+  text-anchor: end;
+}
+
+
+.pieGraph {
+  height: 170px;
+  width: 380px;
+}
+
+.pieGraph .grid {
+  stroke:darkgray;
+  stroke-dasharray: 0;
+  stroke-width: 1;
+}
+
+#skillName{
+  color: #3c096c;
+}
+
+.labels {
+  font-size: 11px;
+}
+
+.label-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  fill: black;
+}
+
+.data {
+  fill:green;
+  stroke-width: 1; 
+}
+
+.row:nth-child(2) .column:nth-child(1)
+{
+    background:#f7f7f7;
+
+}
+.row:nth-child(2) .column:nth-child(2)
+{
+    background:#f7f7f7;
+
+}
+/*make cards responsive to screen size for multimedia*/
+@media(max-width: 900px)
+{
+    .container
+    {
+       margin:0;
+       padding: 10px; 
+       width: 100%;
+    }
+    .column{
+        width:100%;
+        display:block;
+        margin: 10px 0;
+        border: none;
+        box-sizing: border-box;
+    }
+    .row{
+        margin:0;
+
+    }
+}
+
+/*profile sections*/
+#hProfile{
+  border-radius: 25px;
+  background-size: 100%;
+  padding-top: .5cm;
+  padding-left: 1cm;
+  padding-bottom: 1.5cm;
+  padding-right: 1cm;
+  color:#3c096c;
+  font-size: 1rem;
+  font-family: 'Sirin Stencil', cursive;
+  line-height: 75%;
+  height: 40vh;
+  width: 70vh;
+  display: block;
+  box-shadow: 2px 2px 2px 2px white;
+  align-content: space-evenly;
+  text-align: justify;
+}
+/* graphs */
+#charts{
+  border-radius: 25px;
+  background-size: 100%;
+  padding-top: .5cm;
+  padding-left: 1cm;
+  padding-bottom: 1.5cm;
+  padding-right: 1cm;
+  color:#3c096c;
+  font-size: 1rem;
+  font-family: 'Sirin Stencil', cursive;
+  line-height: 75%;
+  height: 45vh;
+  width: 70vh;
+  display: block;
+  box-shadow: 2px 2px 2px 2px white;
+  align-content: space-evenly;
+  text-align: center;
+}
+
+/*helena picture*/
+#profile{
+  margin-right: 40px;
+  height: 60px;
+  width: 60px;
+}
+
+/*profile data*/
+#addData{
+  align-content: space-evenly;
+  text-align: justify;
+}
+
+#Profile {background-color: #eaf8da;}
+#Projects {background-color:#d7e3fc;}
+#Analysis {background-color: #f7f7f7;}
+#Charts {background-color: #fffae5;}
+#Instructions {background-color: #C3FF99;}
+
