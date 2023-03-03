@@ -19,8 +19,8 @@
 </head>
 <body class="textClass">
 
-<button class="tablink" onclick="openPage('Profile', this, '#eaf8da')" id="defaultOpen">At a glance</button>
-<button class="tablink" onclick="openPage('Projects', this, '#d7e3fc')" >Projects details</button>
+<button class="tablink" onclick="openPage('Profile', this, '#eaf8da')" >At a glance</button>
+<button class="tablink" onclick="openPage('Projects', this, '#d7e3fc')" id="defaultOpen">Projects details</button>
 <button class="tablink" onclick="openPage('Analysis', this, '#f7f7f7')">IT Skills</button>
 <button class="tablink" onclick="openPage('Charts', this, '#fffae5')">Charts</button>
 <button class="tablink" onclick="openPage('Instructions', this, '#C3FF99')">Graphql instructions</button>
@@ -81,29 +81,6 @@
                 <option value="15" >SVG</option>
                 <option value="16" >Graphql</option>
               </select>
-
-            <!-- the pie graph -->
-          <!-- <svg id="cont" height="20" width="20" viewbox="0 0 20 20"> -->
-            <!-- background circle -->
-            <!-- <circle id="circle1" r="10" cx="10" cy="10" fill="white"/> -->
-
-            <!-- circle circumference = 2*pie*r (=2 * 3.14 * 10) -->
-            <!-- in this case, 31.4 is the circumference, and pie chart shows -->
-            <!-- second circle, used to create a 'wedge' by increasing its 'stroke-width'-->
-
-            <!-- <g>
-            <circle id="circle2" r="5" cx="10" cy="10" fill="transparent"
-              stroke="#F9DBBB"
-              stroke-width="10"
-             
-              stroke-dasharray="calc((90/820*100)*31.4/100)31.4"
-              transform="rotate(-90) translate(-20)"
-              />
-              
-            </g>
-            <text id="skillName" x="10" y="6.5" dy="3px" style="color: #3c096c" font-size="0.09em">HTML, 10%</text>
-          
-          </svg>-->
           </div>
         </div>
       </div>
@@ -113,11 +90,262 @@
 
 
 <div id="Projects" class="tabcontent">
-  <h3>Helena's Projects</h3>
-  <p>The Awesome Projects I Completed at 01F!</p> 
+  <h3>The awesome projects I completed at 01F!</h3>
 
     <body >
-      <table><!-- ... --></table>
+      <section>
+        <div class="container">
+            <table>
+                <tr>
+                    <th>Project&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th>Key skill&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th>Audit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th>Repo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th>Completed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th>Team&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th>Required/Optional&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                </tr>
+                <tr>
+                    <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/go-reloaded" style="display:block;">Go reloaded</a></td>
+                    <td>Golang</td>
+                    <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/go-reloaded/audit" style="display:block;">Audit</a></td>
+                    <td><a href="https://learn.01founders.co/git/AthenaHTA2/go-reloaded" style="display:block;">Repo</a></td>
+                    <td>Yes</td>
+                    <td>Self</td>
+                    <td>Required</td>
+                </tr>
+                <tr>
+                  <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/ascii-art" style="display:block;">ascii-art</a></td>
+                  <td>Golang</td>
+                  <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/ascii-art/audit" style="display:block;">Audit</a></td>
+                  <td><a href="https://learn.01founders.co/git/Nathalie/ascii-art" style="display:block;">Repo</a></td>
+                  <td>Yes</td>
+                  <td>Self +1</td>
+                  <td>Required</td>
+              </tr>
+              <tr>
+                <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/ascii-art/justify" style="display:block;">ascii-art-justify</a></td>
+                <td>Golang</td>
+                <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/ascii-art/justify/audit.md" style="display:block;">Audit</a></td>
+                <td><a href="https://learn.01founders.co/git/AthenaHTA2/ascii-art-justify" style="display:block;">Repo</a></td>
+                <td>Yes</td>
+                <td>Self +1</td>
+                <td>Optional</td>
+            </tr>
+            <tr>
+              <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/ascii-art/fs" style="display:block;">ascii-art-fs</a></td>
+              <td>Golang</td>
+              <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/ascii-art/fs/audit.md" style="display:block;">Audit</a></td>
+              <td><a href="https://learn.01founders.co/git/AthenaHTA2/ascii-art-fs" style="display:block;">Repo</a></td>
+              <td>Yes</td>
+              <td>Self +1</td>
+              <td>Optional</td>
+          </tr>
+          <tr>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/ascii-art/output" style="display:block;">ascii-art-output</a></td>
+            <td>Golang</td>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/ascii-art/output/audit.md" style="display:block;">Audit</a></td>
+            <td><a href="https://learn.01founders.co/git/Kingyam/ascii-art-output" style="display:block;">Repo</a></td>
+            <td>Yes</td>
+            <td>Self +1</td>
+            <td>Optional</td>
+          </tr>
+          <tr>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/ascii-art/color" style="display:block;">ascii-art-color</a></td>
+            <td>Golang</td>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/ascii-art/color/audit.md" style="display:block;">Audit</a></td>
+            <td><a href="https://learn.01founders.co/git/AthenaHTA2/ascii-art-color" style="display:block;">Repo</a></td>
+            <td>Yes</td>
+            <td>Self +1</td>
+            <td>Optional</td>
+          </tr>
+          <tr>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/ascii-art-web" style="display:block;">ascii-art-web</a></td>
+            <td>Golang</td>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/ascii-art-web/audit" style="display:block;">Audit</a></td>
+            <td><a href="https://learn.01founders.co/git/AthenaHTA2/ascii-art-web_Helena" style="display:block;">Repo</a></td>
+            <td>Yes</td>
+            <td>Self +1</td>
+            <td>Required</td>
+          </tr>
+          <tr>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/ascii-art-web/dockerize" style="display:block;">ascii-art-web-dockerize</a></td>
+            <td>Golang</td>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/ascii-art-web/dockerize/audit.md" style="display:block;">Audit</a></td>
+            <td><a href="https://learn.01founders.co/git/AthenaHTA2/ascii-art-web-dockerize" style="display:block;">Repo</a></td>
+            <td>Yes</td>
+            <td>Self +1</td>
+            <td>Required</td>
+          </tr>
+          <tr>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/ascii-art-web/stylize" style="display:block;">ascii-art-stylize</a></td>
+            <td>Golang</td>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/ascii-art-web/stylize/audit.md" style="display:block;">Audit</a></td>
+            <td><a href="https://learn.01founders.co/git/Nathan/ascii-art-web-stylize.git" style="display:block;">Repo</a></td>
+            <td>Yes</td>
+            <td>Self +1</td>
+            <td>Optional</td>
+          </tr>
+          <tr>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/ascii-art-web/export-file" style="display:block;">ascii-art-export-file</a></td>
+            <td>Golang</td>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/ascii-art-web/export-file/audit.md" style="display:block;">Audit</a></td>
+            <td><a href="https://learn.01founders.co/git/AthenaHTA2/ascii-art-web-export-file.git" style="display:block;">Repo</a></td>
+            <td>Yes</td>
+            <td>Self +1</td>
+            <td>Optional</td>
+          </tr>
+          <tr>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/groupie-tracker" style="display:block;">groupie-tracker</a></td>
+            <td>Golang</td>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/groupie-tracker/audit" style="display:block;">Audit</a></td>
+            <td><a href="https://learn.01founders.co/git/AthenaHTA2/groupie-tracker" style="display:block;">Repo</a></td>
+            <td>Yes</td>
+            <td>Self +1</td>
+            <td>Required</td>
+          </tr>
+          <tr>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/lem-in" style="display:block;">lem-in</a></td>
+            <td>Golang</td>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/lem-in/audit" style="display:block;">Audit</a></td>
+            <td><a href="https://learn.01founders.co/git/sonalkamat/lem-in" style="display:block;">Repo</a></td>
+            <td>Yes</td>
+            <td>Self +2</td>
+            <td>Required</td>
+          </tr>
+          <tr>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/math-skills" style="display:block;">math-skills</a></td>
+            <td>Golang</td>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/math-skills/audit" style="display:block;">Audit</a></td>
+            <td><a href="https://learn.01founders.co/git/AthenaHTA2/math-skills" style="display:block;">Repo</a></td>
+            <td>Yes</td>
+            <td>Self</td>
+            <td>Optional</td>
+          </tr>
+          <tr>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/forum" style="display:block;">forum</a></td>
+            <td>Golang</td>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/forum/audit" style="display:block;">Audit</a></td>
+            <td><a href="https://learn.01founders.co/git/AthenaHTA2/forum.git" style="display:block;">Repo</a></td>
+            <td>Yes</td>
+            <td>Self + 3</td>
+            <td>Required</td>
+          </tr>
+          <tr>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/make-your-game" style="display:block;">make-your-game</a></td>
+            <td>JavaScript</td>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/make-your-game/audit" style="display:block;">Audit</a></td>
+            <td><a href="https://learn.01founders.co/git/karolis/make-your-game.git" style="display:block;">Repo</a></td>
+            <td>Yes</td>
+            <td>Self + 2</td>
+            <td>Required</td>
+          </tr>
+          <tr>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/real-time-forum" style="display:block;">real-time-forum</a></td>
+            <td>JavaScript</td>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/real-time-forum/audit" style="display:block;">Audit</a></td>
+            <td><a href="https://learn.01founders.co/git/Gowseny/real-time-forum.git" style="display:block;">Repo</a></td>
+            <td>Yes</td>
+            <td>Self + 3</td>
+            <td>Required</td>
+          </tr>
+          <tr>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/real-time-forum" style="display:block;">graphql</a></td>
+            <td>JavaScript</td>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/real-time-forum/audit" style="display:block;">Audit</a></td>
+            <td><a href="https://learn.01founders.co/git/AthenaHTA2/graphql.git" style="display:block;">Repo</a></td>
+            <td>Yes</td>
+            <td>Self</td>
+            <td>Required</td>
+          </tr>
+          <tr>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/social-network" style="display:block;">social-network</a></td>
+            <td>JavaScript</td>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/social-network/audit" style="display:block;">Audit</a></td>
+            <td><a href="" style="display:block;">Repo</a></td>
+            <td>Not started</td>
+            <td>Self + </td>
+            <td>Required</td>
+          </tr>
+          <tr>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/mini-framework" style="display:block;">mini-framework</a></td>
+            <td>JavaScript</td>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/mini-framework/audit" style="display:block;">Audit</a></td>
+            <td><a href="" style="display:block;">Repo</a></td>
+            <td>Not started</td>
+            <td>Self + </td>
+            <td>Required</td>
+          </tr>
+          <tr>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/bomberman-dom" style="display:block;">bomberman-dom</a></td>
+            <td>JavaScript</td>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/bomberman-dom/audit" style="display:block;">Audit</a></td>
+            <td><a href="" style="display:block;">Repo</a></td>
+            <td>Not started</td>
+            <td>Self + </td>
+            <td>Required</td>
+          </tr>
+          <tr>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/smart-road" style="display:block;">smart-road</a></td>
+            <td>Rust</td>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/smart-road/audit" style="display:block;">Audit</a></td>
+            <td><a href="" style="display:block;">Repo</a></td>
+            <td>Not started</td>
+            <td>Self + </td>
+            <td>Required</td>
+          </tr>
+          <tr>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/rt" style="display:block;">rt</a></td>
+            <td>Rust</td>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/rt/audit" style="display:block;">Audit</a></td>
+            <td><a href="" style="display:block;">Repo</a></td>
+            <td>Not started</td>
+            <td>Self + </td>
+            <td>Required</td>
+          </tr>
+          <tr>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/filler" style="display:block;">filler</a></td>
+            <td>Rust</td>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/filler/audit" style="display:block;">Audit</a></td>
+            <td><a href="" style="display:block;">Repo</a></td>
+            <td>Not started</td>
+            <td>Self + </td>
+            <td>Required</td>
+          </tr>
+          <tr>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/multiplayer-fps" style="display:block;">multiplayer-fps</a></td>
+            <td>Rust</td>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/multiplayer-fps/audit" style="display:block;">Audit</a></td>
+            <td><a href="" style="display:block;">Repo</a></td>
+            <td>Not started</td>
+            <td>Self + </td>
+            <td>Required</td>
+          </tr>
+          <tr>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/0-shell" style="display:block;">0-shell</a></td>
+            <td>Rust</td>
+            <td><a href="https://learn.01founders.co/git/root/public/src/branch/master/subjects/0-shell/audit" style="display:block;">Audit</a></td>
+            <td><a href="" style="display:block;">Repo</a></td>
+            <td>Not started</td>
+            <td>Self + </td>
+            <td>Required</td>
+          </tr>
+            </table>  
+            <br>
+            <br>
+            <table>
+              <tr>
+                  <th>Golang revision&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>  
+              </tr>
+              <tr>
+                <td><a href="https://learn.01founders.co/git/AthenaHTA2/GO_Revision/src/branch/main/Exam_Pilot_GO.pdf" style="display:block;">Exam Pilot-Go</a></td>
+              </tr>
+              <tr>
+                <td><a href="https://learn.01founders.co/git/AthenaHTA2/AaaGoRevision/src/branch/master/Exam_Pilot_GO/Golang-Cheat-Sheet-by-Golang-Dojo.pdf" style="display:block;">Golang Dojo cheat sheet</a></td>
+              </tr>
+            </table>
+        </div>
+    </section>
     </body>
 
 </div>

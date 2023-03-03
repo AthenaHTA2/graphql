@@ -48,9 +48,7 @@ body, html {
 /*contains the four 'Profile' cards*/
 section
 {
-    /* height: 90vh; */
-    /* display:flex; */
-    /* margin:auto; */
+
     align-items: center;
     justify-content: center;
 }
@@ -84,7 +82,6 @@ section
 /*styles row 1 and row 2 in 'container'*/
 .row
 {
-    /* margin:20px 0; */
     transition: .5s;
     display:flex;
     margin:auto;
@@ -155,8 +152,7 @@ path {
   height: 185px;
   width: 385px;
   opacity:0.7;
-  /* margin-top:20px;
-  margin-bottom: 20px; */
+
 }
 
 
@@ -171,8 +167,6 @@ g#graph-points {
 g#graph-points:hover {
   z-index: 9;
   opacity: 2;
-  /* font-size: 30px;
-  text-align: center; */
   transform-style: all;
   transition-duration: 2s;
 }
@@ -228,26 +222,6 @@ g#graph-texts {
   height: 165px;
   width: 365px;
 }
-
-
-/* deprecated: styles the line graph */
-/*section#svg-path {
-  text-align: center;
-  height: 180px;
-  width: 425px;
-
-}
-
-.lineGraph {
-  height: 170px;
-  width: 400px;
-}
-
-.lineGraph .grid {
-  stroke:darkgray;
-  stroke-dasharray: 0;
-  stroke-width: 1;
-}*/
 
 /* <========> End of line graph styling <=========> */
 
