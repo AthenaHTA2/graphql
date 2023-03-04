@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <!-- <meta charset="UTF-8"> -->
+    <meta content="utf-8" http-equiv="encoding">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cybersonic</title>
@@ -21,9 +22,9 @@
 
 <button class="tablink" onclick="openPage('Profile', this, '#eaf8da')" id="defaultOpen">At a glance</button>
 <button class="tablink" onclick="openPage('Projects', this, '#d7e3fc')" >Projects details</button>
-<button class="tablink" onclick="openPage('Analysis', this, '#f7f7f7')">IT Skills</button>
+<!-- <button class="tablink" onclick="openPage('Analysis', this, '#f7f7f7')">IT Skills</button>
 <button class="tablink" onclick="openPage('Charts', this, '#fffae5')">Charts</button>
-<button class="tablink" onclick="openPage('Instructions', this, '#C3FF99')">Graphql instructions</button>
+<button class="tablink" onclick="openPage('Instructions', this, '#C3FF99')">Graphql instructions</button> -->
 
 
 <div id="Profile" class="tabcontent">
@@ -364,8 +365,7 @@
 
 </div>
 
-<div id="Analysis" class="tabcontent">
-<!-- the skills bar chart -->
+<!-- <div id="Analysis" class="tabcontent">
   <div style="text-align: center;">
     <h3>IT Skills Summary Chart</h3>
     <div id="d3-container"></div>
@@ -465,9 +465,10 @@
       Piscine (JS/Go) stats<br>
       PASS and FAIL ratio<br>
       Attempts for each exercise<br>
-    </div>
+    </div> -->
 
   <script src="/home/helena/graphql/modules/index.js"></script>
+  <script src="/home/helena/graphql/modules/graphs.js"></script>
   <script src="https://d3js.org/d3.v4.min.js"></script>
 </body>
 </html>
