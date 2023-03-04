@@ -1,4 +1,6 @@
     //draws the line graph showing XPs by project
+    //My skills pie chart was inspired by: https://www.youtube.com/watch?v=XEUCs7Sh8FI
+
       function XpByProjectLineGraph(array, frequency, linecount) {
         array = array.reverse();
         const svgPathParent = document.getElementById("svg-path");

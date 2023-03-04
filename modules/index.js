@@ -4,67 +4,6 @@ var JSDOM = _JSDOM;
 global.document = new JSDOM("html://localhost:5500").window.document;*/
 
 
-//===============> Start of my original graphql query <====================
-//the API: https://learn.01founders.co/api/graphql-engine/v1/graphql
-/*my graphql query, used for profile data, projects' details,  
-//XP by project line graph, XP by task pie chart.
-
-{
-    user(where: {login: {_eq: "AthenaHTA2"}}) {
-			...HelenaId
-    }
-  
- 
-    progress(
-      where: {_and: [{user: {login: {_eq: "AthenaHTA2"}}}, {object: {type: {_eq: "project"}}}, {isDone: {_eq: true}}, {grade: {_neq: 0}}]}
-      order_by: {updatedAt: desc}
-      
-    ) {
-      ...HelenaProgress
-    }
-    transaction(
-      where: {_and: [{user: {login: {_eq: "AthenaHTA2"}}}, {object: {type: {_eq: "project"}}}, {type: {_eq: "xp"}}]}
-      order_by: {amount:desc} 
-    ) {
-      ...HelenaXP
-    }
-    tasksTypes:  transaction(where: { userId: { _eq: 715 }, type: {_like: "%skill%"}}){
-        type
-        amount
-      }
-}
- fragment HelenaId on user{
-  login
-  id
-}
-
-fragment HelenaProgress on progress{
-    id
-    grade
-    createdAt
-    updatedAt
-    object {
-    id
-    name
-    campus
-    }
-  }
-  
-  fragment HelenaXP on transaction{
-    amount
-    createdAt
-    object {
-          id
-          name
-        }
-  }
-
-  
-
-
-//===============> End of my original graphql query <====================
-*/
-
 //===========> I partly used the 'Postman' appication to build the below 'Javascript Fetch: <=======
 // the array of IT skills objects
 var SkillObjects = []
