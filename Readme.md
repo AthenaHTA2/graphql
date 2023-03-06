@@ -94,8 +94,10 @@ fragment HelenaProgress on progress{
           name
         }
   }
+  
+Graphql is deployed in Github:   
 
-Graphql projects by other students:
+Graphql projects by other students:https://athenahta2.github.io/graphql/
 
 a)Godfrey Orlandi: https://magnificent-crumble-2b4f81.netlify.app/
 b)Remi: https://rsmith-github.github.io/graphql/
