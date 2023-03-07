@@ -1,8 +1,10 @@
     //draws the line graph showing XPs by project
     //My skills pie chart was inspired by: https://www.youtube.com/watch?v=XEUCs7Sh8FI
 
+    //array structure: ['real-time-forum', '2023-03-07T11:39:..', 103500, '1.50', 101191']
       function XpByProjectLineGraph(array, frequency, linecount) {
         array = array.reverse();
+        console.log("reversed xp array ==>",array)
         const svgPathParent = document.getElementById("svg-path");
         const Card = document.getElementById("card");
         const svgElment = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -10,17 +12,19 @@
         // svgPath.style.height = "180px";
         const numProjects = array.length;
  
-        const maxVal = array[numProjects-1][2]/1000;
+        let maxVal = array[numProjects-1][2];
+        console.log("the maximum value of xp===>",maxVal)
+        maxVal = maxVal.toFixed(1)/1000;
         console.log("the largest XP in line graph:--->",maxVal);
-        console.log("the index of the largest XP --->",array.indexOf(147000));
  
         //the SVG container dimensions are: 370px * 165px; the container id: #lineGraph
         let widthSvg = Math.min(numProjects * frequency,370);
+        console.log("maximum graph width: ===>",widthSvg)
         frequency = widthSvg/numProjects;
         widthSvg = numProjects * frequency;
         console.log("graph frequency:--->",frequency)
-        const heightSvg = maxVal + 15;
-        const graphLine = maxVal / (linecount - 1);
+        let heightSvg = 180;
+        const graphLine = heightSvg / (linecount - 1);
  
           svgElment.setAttributeNS(null, "width", widthSvg);
           svgElment.setAttributeNS(null, "height", heightSvg);
@@ -223,4 +227,4 @@
             svgPieChartParent.appendChild(svgElment);
         }
         }
-        }          
+    }
