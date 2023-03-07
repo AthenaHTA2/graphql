@@ -64,13 +64,14 @@ var requestOptions = {
           let totalXP = xpTotal
           let progName = data.data.progress[0].object.name;
           let progUpdatedAt = data.data.progress[0].updatedAt;
+          //incorrect, as it assigns the largest xp in array
           let xpAmount = data.data.transaction[0].amount;
           let hGrade = data.data.progress[0].grade;
           //populate an array with profile data
-          const profileHelena = [hlogin,hId,hCampus,totalXP,progName,progUpdatedAt,xpAmount, hGrade];
-          console.log(profileHelena);
-          //populate the 'Profile' section on 'At-a-glance' tab
-          showProfile(profileHelena);
+          let profileHelena = [hlogin,hId,hCampus,totalXP,progName,progUpdatedAt,xpAmount, hGrade];
+          //console.log(profileHelena);
+          //populate the 'Profile' section on 'At-a-glance' tab ==>moved after the 'projects' details to show correct XPs
+          //showProfile(profileHelena);
           //==============Projects' details=========================
           //get projects details
           let oneProject, helenaProjects 
@@ -100,7 +101,13 @@ var requestOptions = {
             helenaProjects.push(oneProject);
           }
           }
-          //populate the 'Projects list' section of the 'At-a-glance'tab
+           //get xp for latest project
+          let xpAmountCorrect = helenaProjects[0][2];
+            profileHelena = [hlogin,hId,hCampus,totalXP,progName,progUpdatedAt,xpAmountCorrect, hGrade];
+            //populate the 'Profile' section on 'At-a-glance' tab, including correct XPs
+            showProfile(profileHelena);
+            //console.log("correct XP for last project?===>",profileHelena)
+            //populate the 'Projects list' section of the 'At-a-glance'tab
             showProjects(helenaProjects)
 
           //populate the 'XP history' SVG line chart (inspiration: https://www.youtube.com/watch?v=RTUZ1VftA5o)
