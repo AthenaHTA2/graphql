@@ -150,7 +150,7 @@ var requestOptions = {
           <p >`+ "Sum of XP for all projects: " + numberWithCommas(data[3]) + `</p>
           <p >`+ "Latest project: " + data[4] + `</p>
           <p >`+ "Completed: " + ConvertDate(data[5]) + `</p>
-          <p >`+ "XP amount: " + numberWithCommas(data[6]) + ",  Grade: " + data[7] + `</p>
+          <p >`+ "XP amount: " + numberWithCommas(data[6]) + ",  Grade: " + data[7].toFixed(1) + `</p>
           </div>
           `
         }
