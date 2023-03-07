@@ -104,7 +104,7 @@ var requestOptions = {
             showProjects(helenaProjects)
 
           //populate the 'XP history' SVG line chart (inspiration: https://www.youtube.com/watch?v=RTUZ1VftA5o)
-          XpByProjectLineGraph(helenaProjects,30, 4);
+          XpByProjectLineGraph(helenaProjects,30, 5);
 
           //makes an array of skills objects e.g.:{name: 'Golang', skill_points: 310, projects_completed:10, color:'#16FF00'}
           SkillObjects = skillData(typesOfTasks);
