@@ -2,20 +2,19 @@
     font-family: 'Sirin Stencil', cursive;
     color: greenyellow;
 }
-
 /*random image on project details tab*/
 img{
-  margin-left: auto;
-  margin-right: auto;
-  height: 200px;
-  width: 600px;
-  display:block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: 600px;
+    display:block;
 }
 
 /*turn picture background on project details tab to blue*/
 .color{
-      background-color: #d7e3fc;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        background-color: #d7e3fc;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /*to include each element's border and padding inside its width/height*/
@@ -56,13 +55,11 @@ body, html {
   color: #3c096c;
   display: none;
   padding: 60px 20px;
-  margin: 10px 10px 10px 10px;
   height: 100%;
 }
 /*contains the four 'Profile' cards*/
 section
 {
-
     align-items: center;
     justify-content: center;
 }
