@@ -1,4 +1,4 @@
-01F JavaScript project #3: Graphql
+# 01F JavaScript project #3: Graphql
 
 This project is deployed on netlify and on github: 
 
