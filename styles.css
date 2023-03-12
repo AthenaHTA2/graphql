@@ -8,6 +8,8 @@ img{
     margin-right: auto;
     height: 200px;
     width: 600px;
+    border-radius: 50%;
+    background: #a84909;
     display:block;
 }
 
