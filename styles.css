@@ -56,7 +56,7 @@ body, html {
   grid-template-columns: 1fr 1fr;
   color: #3c096c;
   display: none;
-  padding: 20px 20px;
+  padding: 50px 20px;
   height: 100%;
 }
 /*contains the four 'Profile' cards*/
